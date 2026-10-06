@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../Gemfile", __dir__)
+require "bundler/setup"
+require_relative "../lib/classifier"
+require_relative "../spec/support/golden_set"
+
+model = Classifier.new
+hits = GOLDEN.count { |e| model.classify(e.text) == e.label }
+accuracy = hits.fdiv(GOLDEN.size)
+passed = accuracy >= THRESHOLD
+
+row = ->(label, value) { puts format("%-13s%s", label, value) }
+row["GOLDEN SET", "#{GOLDEN.size} examples"]
+row["MODEL", Classifier::NAME]
+row["ACCURACY", format("%.2f", accuracy)]
+row["THRESHOLD", format("%.2f", THRESHOLD)]
+puts
+row["RESULT", passed ? "PASS" : "FAIL"]
+
+exit(passed ? 0 : 1)

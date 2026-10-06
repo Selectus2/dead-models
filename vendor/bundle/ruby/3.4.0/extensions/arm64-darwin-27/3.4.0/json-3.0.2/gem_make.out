@@ -1,0 +1,43 @@
+current directory: /Users/vishwa/Documents/projects/personal/dead-models/vendor/bundle/ruby/3.4.0/gems/json-3.0.2/ext/json/ext/parser
+/Users/vishwa/.rvm/rubies/ruby-3.4.7/bin/ruby extconf.rb
+checking for rb_enc_interned_str() in ruby/encoding.h... yes
+checking for rb_str_to_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for ruby_xfree_sized() in ruby.h... no
+checking for x86intrin.h... no
+checking for intrin.h... no
+checking for RUBY_TYPED_EMBEDDABLE in ruby.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... no
+checking for whether -mno-outline is accepted as CFLAGS... no
+checking for arm_neon.h... yes
+checking for cpuid.h... no
+creating Makefile
+
+current directory: /Users/vishwa/Documents/projects/personal/dead-models/vendor/bundle/ruby/3.4.0/gems/json-3.0.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20261006-15022-cqeh65 sitelibdir\=./.gem.20261006-15022-cqeh65 clean
+
+current directory: /Users/vishwa/Documents/projects/personal/dead-models/vendor/bundle/ruby/3.4.0/gems/json-3.0.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20261006-15022-cqeh65 sitelibdir\=./.gem.20261006-15022-cqeh65
+compiling parser.c
+In file included from parser.c:1:
+In file included from ./../json.h:4:
+In file included from /Users/vishwa/.rvm/rubies/ruby-3.4.7/include/ruby-3.4.0/ruby.h:38:
+In file included from /Users/vishwa/.rvm/rubies/ruby-3.4.7/include/ruby-3.4.0/ruby/ruby.h:28:
+In file included from /Users/vishwa/.rvm/rubies/ruby-3.4.7/include/ruby-3.4.0/ruby/internal/arithmetic.h:24:
+In file included from /Users/vishwa/.rvm/rubies/ruby-3.4.7/include/ruby-3.4.0/ruby/internal/arithmetic/char.h:29:
+/Users/vishwa/.rvm/rubies/ruby-3.4.7/include/ruby-3.4.0/ruby/internal/core/rstring.h:398:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  398 |         struct RString retval;
+      |                        ^
+/Users/vishwa/.rvm/rubies/ruby-3.4.7/include/ruby-3.4.0/ruby/internal/core/rbasic.h:86:17: note: member 'klass' declared 'const' here
+   86 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+linking shared-object json/ext/parser.bundle
+
+current directory: /Users/vishwa/Documents/projects/personal/dead-models/vendor/bundle/ruby/3.4.0/gems/json-3.0.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20261006-15022-cqeh65 sitelibdir\=./.gem.20261006-15022-cqeh65 install
+/usr/bin/install -c -m 0755 parser.bundle ./.gem.20261006-15022-cqeh65/json/ext
+
+current directory: /Users/vishwa/Documents/projects/personal/dead-models/vendor/bundle/ruby/3.4.0/gems/json-3.0.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20261006-15022-cqeh65 sitelibdir\=./.gem.20261006-15022-cqeh65 clean
